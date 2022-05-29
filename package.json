@@ -2,13 +2,12 @@
   "name": "event-manager",
   "version": "1.0.0",
   "description": "Простой менеджер событий",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rollup": "rollup -c"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-liki/event-manager.git"
+    "url": "https://github.com/coding-liki/event-manager"
   },
   "keywords": [
     "events"
@@ -18,5 +17,20 @@
   "bugs": {
     "url": "https://github.com/coding-liki/event-manager/issues"
   },
-  "homepage": "https://github.com/coding-liki/event-manager#readme"
+  "homepage": "https://github.com/coding-liki/event-manager#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "rollup": "^2.75.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.7.2"
+  },
+
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }
