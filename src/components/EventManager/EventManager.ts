@@ -1,10 +1,4 @@
-export class Event {
-    processingStopped: boolean = false;
-
-    stopProcessing() {
-        this.processingStopped = true;
-    }
-}
+import Event from "./Event";
 
 interface eventCallback {
     (event: any): void;

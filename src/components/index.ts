@@ -1,1 +1,1 @@
-export {default as EventManager, Event} from "./EventManager";
+export {EventManager, Event} from "./EventManager";
