@@ -1,5 +1,8 @@
 {
-  "name": "event-manager",
+  "name": "@coding-liki/event-manager",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/coding-liki"
+  },
   "version": "1.0.0",
   "description": "Простой менеджер событий",
   "scripts": {
