@@ -10,7 +10,6 @@ export default class EventManager {
 
     subscribe(eventClass: Function, handler: eventCallback) {
         let name = eventClass.name;
-        console.log(handler.constructor.prototype)
         if (!this.eventListeners[name]) {
             this.eventListeners[name] = []
         }
