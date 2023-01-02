@@ -8,7 +8,7 @@ export default class EventManager {
     eventListeners: { [key: string]: eventCallback[] } = {};
     static managers: { [key: string]: EventManager } = {};
 
-    subscribe(eventClass: Function, handler: eventCallback) {
+    public subscribe = (eventClass: Function, handler: eventCallback):EventManager => {
         let name = eventClass.name;
         if (!this.eventListeners[name]) {
             this.eventListeners[name] = []
@@ -16,9 +16,11 @@ export default class EventManager {
         if (this.eventListeners[name].indexOf(handler) === -1) {
             this.eventListeners[name].push(handler);
         }
+
+	return this;
     }
 
-    unsubscribe(eventClass: Function, handlerToDelete: eventCallback) {
+    public unsubscribe = (eventClass: Function, handlerToDelete: eventCallback):EventManager => {
         let name = eventClass.name;
 
         if (this.eventListeners[name]) {
@@ -26,6 +28,8 @@ export default class EventManager {
                 return handler !== handlerToDelete
             })
         }
+
+	return this;
     }
 
     dispatch(event: Event) {
